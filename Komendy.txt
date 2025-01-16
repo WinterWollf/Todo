@@ -1,0 +1,40 @@
+Frontend:
+http://localhost:3000
+
+npm run dev -> wystartowanie Vite
+
+
+
+Backend:
+http://localhost:9000/api
+
+nest g mo prisma modules - wygenerowanie modułu o nazwie "prisma" w folderze "modules"
+nest g s prisma modules - wygenerowanie serwisu o nazwie "prisma" w folderze "modules"
+
+
+npm run start:debug -> wystartowanie backendu NestJs
+npx prisma migrate dev --name init -> utworzenie bazy danych 
+npx prisma migrate deploy -> odtworzenie struktury na podstawie historycznych migracji
+npx prisma generate -> wygenerowanie typów skryptowych odpowiadających strukturze bazy danych
+
+prisma format
+npm run db:migrate addUsers
+prisma migrate reset --force
+
+
+
+Co to jest promise (typ zmiennej)
+Co to DTO
+REST - principles
+CRUD
+Pieprz w hasłach 
+Co to SPA
+
+
+Studia
+Dom
+Online
+Praca
+Kolokwium
+Egzamin
+Inne

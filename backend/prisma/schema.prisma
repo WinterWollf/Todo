@@ -1,0 +1,50 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model ToDo {
+  id          Int       @id @default(autoincrement())
+  title       String
+  description String
+  done        Boolean   @default(false)
+  priority    Int       @default(1)
+  createdAt   DateTime  @default(now())
+  user        User      @relation(fields: [userId], references: [id])
+  userId      Int
+  tags        ToDoTag[]
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+  todos     ToDo[]
+}
+
+model Tag {
+  id    Int       @id @default(autoincrement())
+  name  String    @unique
+  todos ToDoTag[]
+}
+
+model ToDoTag {
+  id     Int  @id @default(autoincrement())
+  todo   ToDo @relation(fields: [todoId], references: [id]) // Ewentualne onDelete: CASCADE
+  todoId Int
+  tag    Tag  @relation(fields: [tagId], references: [id])
+  tagId  Int
+
+  @@unique([todoId, tagId]) // To samo zadanie i tag nie będą powiązane wielokrotnie
+}
