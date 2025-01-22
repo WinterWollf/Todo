@@ -45,7 +45,7 @@ export const LoginPage: FC = () => {
 
     const handleRegisterSubmit = async (user: UserType) => {
         try {
-            await register(user.email, user.password);
+            await register(user.email, user.password, user.admin===false);
             setNotification({
                 message: 'Registration successful',
                 type: 'success',
@@ -111,13 +111,13 @@ export const LoginPage: FC = () => {
                         <Image radius="md" src="src/assets/AGH_Logo.png" h="auto" w="auto"/>
                     </div>
                     <Stack h={300} align="center" justify="center" gap="lg">
-                        <TextInput required type="email" label="Email" {...form.getInputProps('email')} />
-                        <TextInput required type="password" label="Password" {...form.getInputProps('password')} />
+                        <TextInput required type="email" label="Email" error={form.errors.email} {...form.getInputProps('email')} />
+                        <TextInput required type="password" label="Password" error={form.errors.email} {...form.getInputProps('password')} />
                         <Button variant="gradient" gradient={{from: '#006A3C', to: '#A71A30', deg: 0}} fw={500} w={150}
                                 size="lg" radius="xl" type="submit">Login</Button>
                     </Stack>
                     <div style={{ textAlign: 'right', padding: "50px 0px" }}>
-                        <Button variant="transparent" color="white" radius="xl" size="lg" fw={500} onClick={handleRegister}>Register</Button>
+                        <Button variant="transparent" color="white" radius="xl" size="lg" fw={500} onClick={handleRegister} id="register-open-button">Register</Button>
                     </div>
                 </div>
             </form>
@@ -132,6 +132,7 @@ export const LoginPage: FC = () => {
                         gap="lg"
                     >
                         <TextInput
+                            id="mail-register-form"
                             required
                             radius="xl"
                             label="Email"
@@ -141,6 +142,7 @@ export const LoginPage: FC = () => {
                         />
 
                         <PasswordInput
+                            id="password-register-form"
                             required
                             radius="lg"
                             label="Password"
@@ -150,7 +152,7 @@ export const LoginPage: FC = () => {
                         />
 
                         <Group justify="center">
-                            {mode.mode && <Button variant="filled" type="submit">Register</Button>}
+                            {mode.mode && <Button variant="filled" type="submit" id="register-submit-button">Register</Button>}
                         </Group>
                     </Stack>
                 </form>

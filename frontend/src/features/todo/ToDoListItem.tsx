@@ -215,7 +215,7 @@ export const ToDoListItem: FC<ToDoListItemProps> = memo(({item}) => {
                         <Menu shadow="md" width={200}>
                             <Menu.Target>
                                 <ActionIcon variant="light" color="teal" size="2.2rem" radius="md" aria-label="Settings">
-                                    <IconSettings style={{width: '70%', height: '70%'}} stroke={1.5}/>
+                                    <IconSettings id="settings-button" style={{width: '70%', height: '70%'}} stroke={1.5}/>
                                 </ActionIcon>
                             </Menu.Target>
 
@@ -224,7 +224,7 @@ export const ToDoListItem: FC<ToDoListItemProps> = memo(({item}) => {
                                 <Menu.Item onClick={handleEditClick} leftSection={<IconEdit size={14}/>}>
                                     Edit task
                                 </Menu.Item>
-                                <Menu.Item onClick={openDeleteModal} color="red" leftSection={<IconTrash size={14}/>}>
+                                <Menu.Item id="delete-warning" onClick={openDeleteModal} color="red" leftSection={<IconTrash size={14}/>}>
                                     Delete task
                                 </Menu.Item>
                             </Menu.Dropdown>
@@ -243,6 +243,7 @@ export const ToDoListItem: FC<ToDoListItemProps> = memo(({item}) => {
                         gap="lg"
                     >
                         <TextInput
+                            id="title-input"
                             radius="xl"
                             label="Title"
                             withAsterisk
@@ -251,6 +252,7 @@ export const ToDoListItem: FC<ToDoListItemProps> = memo(({item}) => {
                         />
 
                         <Textarea
+                            id="description-input"
                             radius="lg"
                             label="Description"
                             withAsterisk
@@ -269,7 +271,7 @@ export const ToDoListItem: FC<ToDoListItemProps> = memo(({item}) => {
                         <Text fw={500} style={{paddingTop: "20px"}}>
                             Select priority
                         </Text>
-                        <Rating value={StarValue} count={3} onChange={setValue} />
+                        <Rating id="rating-button-edit" value={StarValue} count={3} onChange={setValue} />
 
                         <MultiSelect
                             label="Tag your task"

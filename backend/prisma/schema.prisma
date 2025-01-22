@@ -31,6 +31,7 @@ model User {
   password  String
   createdAt DateTime @default(now())
   todos     ToDo[]
+  admin     Boolean  @default(false)
 }
 
 model Tag {

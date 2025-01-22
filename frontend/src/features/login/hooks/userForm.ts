@@ -7,6 +7,7 @@ export const useUserForm = () => {
         initialValues: {
             email: '',
             password: '',
+            admin: false,
         },
     });
 

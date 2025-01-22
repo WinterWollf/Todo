@@ -23,12 +23,10 @@ prisma migrate reset --force
 
 
 
-Co to jest promise (typ zmiennej)
-Co to DTO
-REST - principles
-CRUD
-Pieprz w hasłach 
-Co to SPA
+Cypress:
+npx cypress open
+
+
 
 
 Studia

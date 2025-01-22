@@ -1,12 +1,14 @@
-import {Navigate, RouteObject, useRoutes} from "react-router-dom";
-import {Layout} from "../components/Layout.tsx";
-import {ToDoHistory} from "./todo/ToDoHistory.tsx";
-import {ToDoList} from "./todo/ToDoList.tsx";
-import {ToDoForm} from "./todo/ToDoForm.tsx";
-import {ErrorPage} from "./error/ErrorPage.tsx";
-import {LoginPage} from "./login/LoginPage.tsx";
-import {useIsLogged} from "../hooks/useIsLogged.ts";
-import {ProfilePage} from "./profile/ProfilePage.tsx";
+import { Navigate, RouteObject, useRoutes } from "react-router-dom";
+import { Layout } from "../components/Layout.tsx";
+import { ToDoHistory } from "./todo/ToDoHistory.tsx";
+import { ToDoList } from "./todo/ToDoList.tsx";
+import { ToDoForm } from "./todo/ToDoForm.tsx";
+import { ErrorPage } from "./error/ErrorPage.tsx";
+import { LoginPage } from "./login/LoginPage.tsx";
+import { useIsLogged } from "../hooks/useIsLogged.ts";
+import { ProfilePage } from "./profile/ProfilePage.tsx";
+import { AdminPage } from "./admin/AdminPage.tsx";
+import { useIsAdmin } from "../hooks/useIsAdmin.ts";
 
 const publicRoutes: RouteObject[] = [
     {
@@ -14,11 +16,11 @@ const publicRoutes: RouteObject[] = [
         children: [
             {
                 path: "/login",
-                element: <LoginPage/>
+                element: <LoginPage />
             },
             {
                 path: "*",
-                element: <Navigate to="/login" replace/>
+                element: <Navigate to="/login" replace />
             }
         ]
     }
@@ -27,31 +29,35 @@ const publicRoutes: RouteObject[] = [
 const privateRoutes: RouteObject[] = [
     {
         path: "/",
-        element: <Layout/>,
+        element: <Layout />,
         children: [
             {
                 path: "/todo",
-                element: <ToDoList/>
+                element: <ToDoList />
             },
             {
                 path: "/todo/new",
-                element: <ToDoForm/>
+                element: <ToDoForm />
             },
             {
                 path: "/todo/:id",
-                element: <ToDoForm/>
+                element: <ToDoForm />
             },
             {
                 path: "/history",
-                element: <ToDoHistory/>
+                element: <ToDoHistory />
             },
             {
                 path: "/profile",
-                element: <ProfilePage/>
+                element: <ProfilePage />
+            },
+            {
+                path: "/admin",
+                element: useIsAdmin() ? <AdminPage /> : <Navigate to="/" replace />,
             },
             {
                 path: "*",
-                element: <ErrorPage/>
+                element: <ErrorPage />
             }
         ]
     }
@@ -61,4 +67,4 @@ export const Routing = () => {
     const isLogged = useIsLogged();
     const routes = isLogged ? privateRoutes : publicRoutes;
     return useRoutes(routes);
-}
+};

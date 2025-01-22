@@ -24,7 +24,7 @@ export const Layout = () => {
                     </div>
                     <div>
                         <ActionIcon onClick={handleClick} variant="filled" aria-label="Settings" style={{ background: "white" }}>
-                            <IconLogout style={{ width: '100%', height: '100%', color: "black" }} stroke={1.5} />
+                            <IconLogout id="logout-button" style={{ width: '100%', height: '100%', color: "black" }} stroke={1.5} />
                         </ActionIcon>
                     </div>
                 </Group>

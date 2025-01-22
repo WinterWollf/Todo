@@ -9,6 +9,7 @@ Single Page Application with REST API communication
 - NestJS
 - Prisma
 - SQLite
+- Cypress
 
 ## Author
 

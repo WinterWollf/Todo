@@ -9,4 +9,5 @@ export class UserDTO implements User {
   createdAt: Date;
   id: number;
   email: string;
+  admin: boolean;
 }

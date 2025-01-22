@@ -1,5 +1,17 @@
 {
-  "files": [],
+  "compilerOptions": {
+    "target": "ES6",                        // Ensure output is compatible with modern JavaScript
+    "module": "ESNext",                     // Use ESNext for module syntax (supports import/export)
+    "moduleResolution": "node",             // Use Node-style resolution for modules
+    "esModuleInterop": true,                // Allow interoperability between CommonJS and ES Modules
+    "skipLibCheck": true,                   // Skip type checking of declaration files (improves build time)
+    "forceConsistentCasingInFileNames": true, // Ensures file name consistency across OS
+    "resolveJsonModule": true               // Allow importing JSON files
+  },
+  "include": [
+    "cypress/**/*.ts",                      // Ensure TypeScript files in Cypress are included
+    "src/**/*.ts"                           // Include your source code if needed
+  ],
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }

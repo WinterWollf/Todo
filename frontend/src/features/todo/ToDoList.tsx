@@ -35,8 +35,8 @@ export const ToDoList = () => {
     return (
         <div>
             <div style={{display: 'flex', justifyContent: 'right', paddingBottom: "20px"}}>
-                <Rating value={value} count={3} onChange={setValue} size={"xl"}/>
-                <Button style={{backgroundColor: "white"}} w={50} onClick={handleReset} rightSection={<IconRotateClockwise size="2rem" stroke={1.5} color="#000000"/>}/>
+                <Rating id="rating-button" value={value} count={3} onChange={setValue} size={"xl"}/>
+                <Button style={{backgroundColor: "white"}} w={50} onClick={handleReset} id="reset-button" rightSection={<IconRotateClockwise size="2rem" stroke={1.5} color="#000000"/>}/>
             </div>
             <div style={{width: '100%'}}>
                 <SimpleGrid cols={4} spacing="lg" verticalSpacing="lg">

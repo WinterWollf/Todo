@@ -29,4 +29,18 @@ export class UserService {
       },
     });
   }
+
+  async returnAll() {
+    return this.prisma.user.findMany();
+  }
+
+  async updatePassword(userId: number, newPassword: string) {
+    const hashedPassword = await argon2.hash(newPassword);
+    return this.prisma.user.update({
+      where: { id: userId },
+      data: {
+        password: hashedPassword,
+      },
+    });
+  }
 }
