@@ -24,7 +24,7 @@ This project is a full-stack Todo application built using modern web technologie
 ### Frontend
 - React
 - Vite
-- Cypress
+- Mantine
 - Cypress
 
 ## Project Setup
