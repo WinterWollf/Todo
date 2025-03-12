@@ -5,6 +5,7 @@ import {getUserProfile} from './api/get-me';
 interface UserProfile {
     id: number;
     email: string;
+    admin: boolean;
 }
 
 export const ProfilePage: FC = () => {
@@ -57,12 +58,12 @@ export const ProfilePage: FC = () => {
                 </div>
                 <div style={{paddingTop: "60px", paddingLeft: "50px"}}>
                 <Text size="20px" fw="bold">
-                        ID:
+                        Role:
                     </Text>
                     <Text size="18px" c="black" pt="30px">
                         <div style={{backgroundColor: "white", height: "60px", width: "400px", alignContent: "center"}}>
                             <div style={{paddingLeft: "10px", fontWeight: "400"}}>
-                                {userProfile?.id}
+                                {userProfile?.admin ? "Admin" : "User"}
                             </div>
                         </div>
                     </Text>
