@@ -16,16 +16,16 @@ This project is a full-stack Todo application built using modern web technologie
 ## Technologies Used
 
 ### Backend
-- **NestJS**
-- **Prisma**
-- **JWT**
-- **Argon2**
+- NestJS
+- Prisma
+- JWT
+- Argon2
 
 ### Frontend
-- **React**
-- **Vite**
-- **Cypress**
-- **Cypress**
+- React
+- Vite
+- Cypress
+- Cypress
 
 ## Project Setup
 
@@ -65,7 +65,7 @@ This project is a full-stack Todo application built using modern web technologie
 
 1. Navigate to the `frontend` directory:
     ```bash
-    cd ../frontend
+    cd Todo/frontend
     ```
 
 2. Install dependencies:
@@ -84,6 +84,7 @@ This project is a full-stack Todo application built using modern web technologie
 ### Frontend
 
 - End-to-end tests:
+
     ```bash
     npm run cypress:open
     ```
@@ -97,16 +98,22 @@ For deployment instructions, please refer to the [NestJS deployment documentatio
 Here are some screenshots showcasing the main features of the application:
 
 ### 
-![ ](screenshots/)
+![Login page](screenshots/loginPage.png)
 
 ### 
-![ ](screenshots/)
+![Register form](screenshots/registerForm.png)
+
+###
+![Task list](screenshots/taskList.png)
 
 ### 
-![ ](screenshots/)
+![Add task](screenshots/addTask.png)
 
 ### 
-![ ](screenshots/)
+![Task edit menu](screenshots/taskEditMenu.png)
+
+### 
+![Delete confirmation](screenshots/confirmation.png)
 
 ## Resources
 
