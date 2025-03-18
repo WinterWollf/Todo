@@ -93,7 +93,7 @@ This project is a full-stack Todo application built using modern web technologie
 
 For deployment instructions, please refer to the [NestJS deployment documentation](https://docs.nestjs.com/deployment) and the [Vite deployment guide](https://vitejs.dev/guide/static-deploy.html).
 
-## Application Screenshots
+## Screenshots
 
 Here are some screenshots showcasing the main features of the application:
 
