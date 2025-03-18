@@ -101,19 +101,19 @@ Here are some screenshots showcasing the main features of the application:
 ![Login page](screenshots/loginPage.png)
 
 ### **Register form**
-    ![Register form](screenshots/registerForm.png)
+![Register form](screenshots/registerForm.png)
 
 ### **Task liste**
-    ![Task list](screenshots/taskList.png)
+![Task list](screenshots/taskList.png)
 
 ### **Add task**
-    ![Add task](screenshots/addTask.png)
+![Add task](screenshots/addTask.png)
 
 ### **Task edit menue**
-    ![Task edit menu](screenshots/taskEditMenu.png)
+![Task edit menu](screenshots/taskEditMenu.png)
 
 ### **Delete confirmation**
-    ![Delete confirmation](screenshots/confirmation.png)
+![Delete confirmation](screenshots/confirmation.png)
 
 ## Resources
 
