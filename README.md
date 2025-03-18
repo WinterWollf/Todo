@@ -97,23 +97,23 @@ For deployment instructions, please refer to the [NestJS deployment documentatio
 
 Here are some screenshots showcasing the main features of the application:
 
-### 
+### **Login page**
 ![Login page](screenshots/loginPage.png)
 
-### 
-![Register form](screenshots/registerForm.png)
+### **Register form**
+    ![Register form](screenshots/registerForm.png)
 
-###
-![Task list](screenshots/taskList.png)
+### **Task liste**
+    ![Task list](screenshots/taskList.png)
 
-### 
-![Add task](screenshots/addTask.png)
+### **Add task**
+    ![Add task](screenshots/addTask.png)
 
-### 
-![Task edit menu](screenshots/taskEditMenu.png)
+### **Task edit menue**
+    ![Task edit menu](screenshots/taskEditMenu.png)
 
-### 
-![Delete confirmation](screenshots/confirmation.png)
+### **Delete confirmation**
+    ![Delete confirmation](screenshots/confirmation.png)
 
 ## Resources
 
