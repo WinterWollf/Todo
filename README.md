@@ -123,10 +123,13 @@ Here are some screenshots showcasing the main features of the application:
 - [Prisma Documentation](https://www.prisma.io/docs/)
 - [Cypress Documentation](https://docs.cypress.io/)
 
-## Contact
-
-For any inquiries or support, please contact the project author.
-
 ## License
 
 This project is licensed under the Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) License - see the [LICENSE](LICENSE.txt) file for details.
+
+## Contact
+
+For any inquiries or feedback, feel free to reach out to the project author:
+- **GitHub**: [WinterWollf](https://github.com/WinterWollf)
+
+---
